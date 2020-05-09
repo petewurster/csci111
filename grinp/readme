@@ -1,0 +1,40 @@
+Get Right INPut
+general purpose TYPE-SAFE input validation tool for python CLI programs
+grimp() returns input value based on option flags or menu
+
+grinp(prompt, [options], *[high and/or low]) -> str [or float, or int]
+    if options is given a string, flags will be processed; if options is given an iterable
+    those specific values inside the iterable will be converted to strings for input comparison
+    # menu choices of numerical strings will return a string because the 'f' and 'i' flags are
+      not present to be processed
+
+whitelist flags:  (a)lpha  (n)umber  (s)pace  (o)ther
+    these flag permitted characters, all are selected by default 
+
+    ex: grinp('prompt for user', 'ano')
+    # this will permit alphanumeric input and special characters but not
+      permit spaces
+
+requirement flags:  (f)loat  (i)nt
+    these flags will ensure conversion to the required type
+    none are selected by default
+
+    both 'f' & 'i' take precedance over all other whitelist flags, but
+    if both 'f' & 'i' are included, 'f' takes precedence
+
+    ex: grinp('ask for float', 'f')
+    # only accepts input that can be converted to float & returns it as float
+
+    ex: grinp('ask for integer', 'i')
+    # only accepts input that can be converted to an int & returns it as an int
+
+range value flags:  h(i)gh  (l)ow 
+    enforce numerical input to fall within specified range,
+    default values are high = float(inf) & low = float(-inf)
+    # only used if 'f' or 'i' flags are enabled
+    # if both 'h' & 'l' are set, 'l' will take precedence if only one value is given
+    
+menu can be a tuple, or a list consisting of any basic types (float, int, str)
+
+    ex: grinp('say something', [1, 2.2, 3, 'a', 'b'])
+    # a list of specific choices overrides all other flags
