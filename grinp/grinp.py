@@ -42,14 +42,11 @@ def hiLoTest(value, hilo):
 
 
 def setHiLo(hilo, options):
-    if len(hilo) == 2:
-        return [hilo[0], hilo[1]]
+    if len(hilo) == 2: return [hilo[0], hilo[1]]
 
     if len(hilo) == 1:
-        if 'l' in options:
-            return [hilo[0], float('inf')]
-        elif 'h' in options:
-            return [hilo[0], float('-inf')]
+        if 'l' in options: return [hilo[0], float('inf')]
+        elif 'h' in options: return [hilo[0], float('-inf')]
 
     return [float('-inf'), float('inf')]
 
@@ -97,6 +94,4 @@ def checkMenu(feedback, menu):
         feedback['err'] = f"\'{feedback['data']}\' does not match the menu <{menu}>"       
 
     return feedback
-    
-
 
