@@ -27,7 +27,7 @@ def isValid(testInput, options = 'anso', *hilo):
     hilo = setHiLo(hilo, options)
         
     if 'f' in options: return floatIt(test, hilo)
-    if 'i' in options: return IntIt(test, hilo)
+    if 'i' in options: return intIt(test, hilo)
 
     if type(options) == str: return filterByFlags(test, options)
     else: return checkMenu(test, options)  
@@ -61,7 +61,7 @@ def floatIt(test, hilo):
 
 
 
-def IntIt(test, hilo):
+def intIt(test, hilo):
     try:
         test['data'] = int(float(test['data']))
         if not hiLoTest(test['data'], hilo):
