@@ -29,15 +29,13 @@ def isValid(testInput, options = 'anso', *hilo):
     if 'f' in options: return floatIt(test, hilo)
     if 'i' in options: return IntIt(test, hilo)
 
-    if type(options) == str: filterByFlags(test, options)
-    else: checkMenu(test, options)  
-
-    return test
+    if type(options) == str: return filterByFlags(test, options)
+    else: return checkMenu(test, options)  
 
 
 
 def hiLoTest(value, hilo):
-    return min(hilo) < value < max(hilo)
+    return min(hilo) <= value <= max(hilo)
 
 
 
@@ -52,25 +50,25 @@ def setHiLo(hilo, options):
 
 
 
-def floatIt(feedback, hilo):
+def floatIt(test, hilo):
     try:
-        feedback['data'] = float(feedback['data'])
-        if not hiLoTest(feedback['data'], hilo):
-            feedback['err'] = f"\'{feedback['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
-    except: feedback['err'] = f"\'{feedback['data']}\' cannot be converted to float"
+        test['data'] = float(test['data'])
+        if not hiLoTest(test['data'], hilo):
+            test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
+    except: test['err'] = f"\'{test['data']}\' cannot be converted to float"
 
-    return feedback
+    return test
 
 
 
-def IntIt(feedback, hilo):
+def IntIt(test, hilo):
     try:
-        feedback['data'] = int(float(feedback['data']))
-        if not hiLoTest(feedback['data'], hilo):
-            feedback['err'] = f"\'{feedback['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
-    except: feedback['err'] = f"\'{feedback['data']}\' cannot be converted to integer"
+        test['data'] = int(float(test['data']))
+        if not hiLoTest(test['data'], hilo):
+            test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
+    except: test['err'] = f"\'{test['data']}\' cannot be converted to integer"
 
-    return feedback
+    return test
 
 
 
@@ -85,13 +83,15 @@ def filterByFlags(test, flags):
         if not char.isalnum() and not char.isspace() and 'o' not in flags:
             test['err'] = 'special characters not permitted'
 
+    return test
+
 
     
-def checkMenu(feedback, menu):
+def checkMenu(test, menu):
     menu = list(map(lambda x: str(x), menu))
     
-    if feedback['data'] not in menu:
-        feedback['err'] = f"\'{feedback['data']}\' does not match the menu <{menu}>"       
+    if test['data'] not in menu:
+        test['err'] = f"\'{test['data']}\' does not match the menu <{menu}>"       
 
-    return feedback
+    return test
 
