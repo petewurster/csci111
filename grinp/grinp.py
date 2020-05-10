@@ -24,13 +24,13 @@ def grinp(prompt, options = 'anso', *hilo):
 def isValid(testInput, options = 'anso', *hilo):
     test = {'err' : None, 'data' : testInput}
 
-    hilo = setHiLo(hilo, options)
-        
-    if 'f' in options: return floatIt(test, hilo)
-    if 'i' in options: return intIt(test, hilo)
+    if type(options) != str: return checkMenu(test, options)
+    else:
+	    if 'f' in options or 'i' in options:
+	    	hilo = setHiLo(hilo, options)
+	    	return floatIntTest(test, options, hilo)
 
-    if type(options) == str: return filterByFlags(test, options)
-    else: return checkMenu(test, options)  
+	    return filterByFlags(test, options)
 
 
 
@@ -39,36 +39,26 @@ def hiLoTest(value, hilo):
 
 
 
-def setHiLo(hilo, options):
+def setHiLo(hilo, flags):
     if len(hilo) == 2: return [hilo[0], hilo[1]]
 
     if len(hilo) == 1:
-        if 'l' in options: return [hilo[0], float('inf')]
-        elif 'h' in options: return [hilo[0], float('-inf')]
+        if 'l' in flags: return [hilo[0], float('inf')]
+        elif 'h' in flags: return [hilo[0], float('-inf')]
 
     return [float('-inf'), float('inf')]
 
 
 
-def floatIt(test, hilo):
-    try:
-        test['data'] = float(test['data'])
-        if not hiLoTest(test['data'], hilo):
-            test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
-    except: test['err'] = f"\'{test['data']}\' cannot be converted to float"
+def floatIntTest(test, flags, hilo):
+	try:
+		print(flags)
+		test['data'] = float(test['data']) if 'f' in flags else int(float(test['data']))
+		if not hiLoTest(test['data'], hilo):
+			test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
+	except: test['err'] = f"\'{test['data']}\' cannot be converted to {'float' if 'f' in flags else 'integer'}"
 
-    return test
-
-
-
-def intIt(test, hilo):
-    try:
-        test['data'] = int(float(test['data']))
-        if not hiLoTest(test['data'], hilo):
-            test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
-    except: test['err'] = f"\'{test['data']}\' cannot be converted to integer"
-
-    return test
+	return test
 
 
 
