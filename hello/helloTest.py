@@ -1,7 +1,7 @@
 #helloTest.py;
 #dependancies: HelloWorld and HelloAnybody;
 #warm-up exercise for CSCI 111-900;
-#last edit: 11 May 2020 by pWurster;
+#last edit: 12 May 2020 by pWurster;
 
 from HelloAnybody import HelloAnybody, HelloWorld
 
@@ -12,5 +12,6 @@ def main():
 	b = HelloAnybody('prof Herbert')
 	b.display()
 
+	input('\n\n(press enter to quit)')
 
-main()
+if __name__ == '__main__': main()
