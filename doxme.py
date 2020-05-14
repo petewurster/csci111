@@ -9,7 +9,7 @@ import re
 from datetime import date
 
 AUTHOR = 'pWurster'
-
+#import ljkjjk
 def main():
 
 	for file in sys.argv:
@@ -21,7 +21,7 @@ def main():
 					lines = original.readlines()
 					mods = ''
 					for line in lines:
-						if 'import' in line:
+						if 'import' in line and line[0] != '#':
 							mod = re.split("import", line)[1].rstrip()
 #### regex needs streamlining
 							if re.search("[]:!?=+()[\-{}]+", mod): pass
