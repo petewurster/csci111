@@ -26,7 +26,7 @@ def main():
 #### regex needs streamlining
 							if re.search("[]:!?=+()[\-{}]+", mod): pass
 							else: mods += f'{mod},'
-					mods = mods[:-1] + ';'
+					mods = mods[:-1] + ''
 					lines.insert(0, f'#{file};\n#depencancies:{mods if mods else "none;"}\n#last edit: {date.today()}, by {AUTHOR};\n#desc:\n')
 
 				with open(file, 'w') as documented:

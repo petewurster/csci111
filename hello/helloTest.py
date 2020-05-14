@@ -1,7 +1,8 @@
 #helloTest.py;
-#dependancies: HelloWorld and HelloAnybody;
+#depencancies: HelloAnybody, HelloWorld
+#last edit: 2020-05-13, by pWurster;
+#desc:
 #warm-up exercise for CSCI 111-900;
-#last edit: 12 May 2020 by pWurster;
 
 from HelloAnybody import HelloAnybody, HelloWorld
 
