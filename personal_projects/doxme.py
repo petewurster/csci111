@@ -9,7 +9,7 @@ import re
 from datetime import date
 
 AUTHOR = 'pWurster'
-#import ljkjjk
+
 def main():
 
 	for file in sys.argv:
@@ -27,7 +27,7 @@ def main():
 							if re.search("[]:!?=+()[\-{}]+", mod): pass
 							else: mods += f'{mod},'
 					mods = mods[:-1] + ''
-					lines.insert(0, f'#{file};\n#depencancies:{mods if mods else "none;"}\n#last edit: {date.today()}, by {AUTHOR};\n#desc:\n')
+					lines.insert(0, f'#{file};\n#depencancies:{mods if mods else " none;"}\n#last edit: {date.today()}, by {AUTHOR};\n#desc:\n')
 
 				with open(file, 'w') as documented:
 					for line in lines:
