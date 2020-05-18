@@ -7,7 +7,10 @@
 from grinp import grinp
 from LooseChange import LooseChange
 
-x = grinp('Enter a number of cents (less than $1)', 'i', 0, 99)
-change = LooseChange(x)
+def main():
+    x = grinp('Enter a number of cents (less than $1)', 'i', 0, 99)
+    change = LooseChange(x)
 
-print(change.display())
+    print(change.display())
+
+if __name__ == '__main__' : main()

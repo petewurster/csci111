@@ -1,14 +1,22 @@
-"""
-Get Right INPut
-general purpose TYPE-SAFE input validation tool for python CLI programs
-grimp() returns input value based on option flags or menu
-
-grinp(prompt, [options], *[high and/or low]) -> str [or float, or int]
-    if options is given a string, flags will be processed; if options is given an iterable
-    those specific values inside the iterable will be converted to strings for input comparison
-"""
+#grinp.py;
+#depencancies: none;
+#last edit: 2020-05-18, by pWurster;
+#
+#whitelist flags:  (a)lpha  (n)umber  (s)pace  (o)ther
+#requirement flags:  (f)loat  (i)nt
+#range value flags:  h(i)gh  (l)ow
 
 def grinp(prompt, options = 'anso', *hilo):
+    """
+    Get Right INPut
+    general purpose TYPE-SAFE input validation tool for python CLI programs
+    grimp() returns input value based on option flags or menu
+
+    grinp(prompt, [options], *[high and/or low]) -> str [or float, or int]
+    if options is given a string, flags will be processed; if options is given an
+    iterable (instead of flags) those specific values inside the iterable will be
+    converted to strings for input comparison
+    """
     userInput = input(f'{prompt} ')
     test = isValid(userInput, options, *hilo)
 
@@ -52,7 +60,6 @@ def setHiLo(hilo, flags):
 
 def floatIntTest(test, flags, hilo):
 	try:
-		print(flags)
 		test['data'] = float(test['data']) if 'f' in flags else int(float(test['data']))
 		if not hiLoTest(test['data'], hilo):
 			test['err'] = f"\'{test['data']}\' is outside the range {min(hilo)} thru {max(hilo)}"
