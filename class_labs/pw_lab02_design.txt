@@ -1,0 +1,12 @@
+init variables to 0 (total, quarters, dimes, nickels, pennies)
+coin vars stored in dictionary for later iteration
+
+get input from user as total (in cents)
+	attempt to cast total to int
+	throw exception and quit if casting fails
+
+direct conversion of total to enumerated coins via integer-division & modulus operators: this requires less lines of code than it would to update the remaining total after each conversion
+
+loop over 'coins' to build output string
+
+print results
