@@ -31,7 +31,7 @@ while userGuess != computerPick:
 	print(f'Too {"high" if userGuess > computerPick else "low"}', end = '... ')
 	userGuess = int(input('guess again: '))
 
-        #increment counter
+	#increment counter
 	guessCounter += 1
 
 #reveal computer's secret number and the number of attempts
