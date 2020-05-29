@@ -1,6 +1,6 @@
 #pw_lab03_quadrant_distance.py;
 #depencancies: math
-#last edit: 2020-05-26, by pWurster;
+#last edit: 2020-05-29, by pWurster;
 #
 #Gets x,y coords from the user, displays Cartesian Quadrant and distance
 #from the origin in unspecified units to 3 points of precision
@@ -36,4 +36,4 @@ else:
 
 #display results
 print(f'\nPoint ({point[0]}, {point[1]}) lies in Quadrant {quadrant} of the Cartesian plane')
-print(f'and is {round(distance, PRECISION)} units away from the origin (0, 0).')
+print(f'and is {distance:.{PRECISION}f} units away from the origin (0, 0).')
