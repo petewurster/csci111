@@ -1,32 +1,27 @@
 #gymnastic.py;
 #depencancies: none;
-#last edit: 2020-05-23, by pWurster;
-#get scores from 6 gymnastics judges & average them using a program modularized
-#into functions with 'good' documentation (even though decent semantic naming
-#practices can eliminate the need for most comments)
+#last edit: 2020-06-01, by pWurster;
+#get scores from 6 gymnastics judges & average them using a program that is
+#modularized into functions and is well documented
 
-#this constant is based on the program requirement for 6 judges
-NUMBER_OF_JUDGES: int = 6
+#init vars
+NUMBER_OF_JUDGES: int = 6 #constant based on program requirement for 6 judges
 
-#func gets score from each judge & returns it as a float rounded to 1 place
+
+#gets score from each judge & returns it as a float
 def getScoreFrom(judge: str) -> float:
-	return round(float(input(f'How do you score it {judge}? ')), 1)
+	return float(input(f'Score for {judge}: '))
 
-#func calculates average of the collected scores & returns a float rounded to 2 places
+#calculates average of the collected scores & returns a float
 def calculateAverageFrom(scores: dict) -> float:
-	return round(float(sum(scores.values()) / len(scores)), 2)
+	return float(sum(scores.values()) / len(scores))
 
-#func to display results
-def display(results: str):
-	print(results)
-
+#use list comprehension and zip to create dictionary for tracking judge scores
 def buildDictionaryToTrackJudgesScores(x: int) -> dict:
 	return dict(zip(['Judge ' + str(y + 1) for y in range(x)], [0] * x))
 
 #this func controls the flow
 def main():
-	#this is the ONLY line in this prog that ACTUALLY warrants a comment
-	#because it does several things in one line:
 	#create dictionary, setting scores to 0 for Judges 1-6 by zipping arrays
 	judgeScores: dict = buildDictionaryToTrackJudgesScores(NUMBER_OF_JUDGES)
 	
@@ -34,8 +29,8 @@ def main():
 	for judge in sorted(judgeScores.keys()):
 		judgeScores[judge] = getScoreFrom(judge)
 
-	# display the results
-	display(f'Average score is: {calculateAverageFrom(judgeScores)}')
+	#display the results
+	print(f'The average score is: {calculateAverageFrom(judgeScores):.2f}')
 
 #call the main function as long as this file wasn't imported as a module
 if __name__ == '__main__': main()
