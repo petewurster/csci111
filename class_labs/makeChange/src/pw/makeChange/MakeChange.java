@@ -1,6 +1,6 @@
 /*
 MakeChange.java;
-last edit: 2020-06-05, by pWurster;
+last edit: 2020-06-07, by pWurster;
 takes integer value from user (in cents) and converts to quantities of
 coin representations attempting to use the same design from my Python version
 */

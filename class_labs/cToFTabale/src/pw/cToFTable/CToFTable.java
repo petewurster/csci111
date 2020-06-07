@@ -1,12 +1,12 @@
 /*
 pw_lab04_CtoFtable.py;
-last edit: 2020-06-05, by pWurster;
+last edit: 2020-06-07, by pWurster;
 Prints table of Celcius to Fahrenheit from Celcius 0 to 40;
 */
 
 package pw.cToFTable; //namespace
 
-public class CtoFtable {
+public class CToFTable {
     public static void main(String[] args) {
         //no vars to declare -- only using temp vars in scope of 'for' loop
 

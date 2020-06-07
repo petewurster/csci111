@@ -1,6 +1,6 @@
 /*
 HelloWorld.java;
-last edit: 2020-06-05, by pWurster;
+last edit: 2020-06-07, by pWurster;
 Hello, world! program for CSCI 111-900;
 */
 

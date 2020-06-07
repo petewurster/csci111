@@ -17,15 +17,19 @@
   <component name="ProjectId" id="1cvTumR3UDDdWvyuRFrVChvuFiT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager">
     <configuration name="MakeChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="pw.makeChange.MakeChange" />
       <module name="makeChange" />
       <extension name="coverage">
@@ -44,18 +48,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,25 +62,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1591412905363">
-      <screen x="0" y="0" width="1366" height="735" />
+    <state x="1825" y="19" width="1034" height="848" key="#Project_Structure" timestamp="1591538759340">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1825" y="19" width="1034" height="848" key="#Project_Structure/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591538759340" />
+    <state x="1899" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591538701920">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1899" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591538701920" />
+    <state width="1833" height="172" key="GridCell.Tab.0.bottom" timestamp="1591539403360">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.0.1366.735/1366.0.1920.1080@0.0.1366.735" timestamp="1591412905363" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1591412905363">
-      <screen x="0" y="0" width="1366" height="735" />
+    <state width="1833" height="172" key="GridCell.Tab.0.bottom/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591539403360" />
+    <state width="1833" height="172" key="GridCell.Tab.0.center" timestamp="1591539403360">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="173" key="GridCell.Tab.0.center/0.0.1366.735/1366.0.1920.1080@0.0.1366.735" timestamp="1591412905363" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1591412905363">
-      <screen x="0" y="0" width="1366" height="735" />
+    <state width="1833" height="172" key="GridCell.Tab.0.center/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591539403360" />
+    <state width="1833" height="172" key="GridCell.Tab.0.left" timestamp="1591539403360">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="173" key="GridCell.Tab.0.left/0.0.1366.735/1366.0.1920.1080@0.0.1366.735" timestamp="1591412905363" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1591412905363">
-      <screen x="0" y="0" width="1366" height="735" />
+    <state width="1833" height="172" key="GridCell.Tab.0.left/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591539403360" />
+    <state width="1833" height="172" key="GridCell.Tab.0.right" timestamp="1591539403360">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1320" height="173" key="GridCell.Tab.0.right/0.0.1366.735/1366.0.1920.1080@0.0.1366.735" timestamp="1591412905363" />
+    <state width="1833" height="172" key="GridCell.Tab.0.right/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591539403360" />
+    <state x="1825" y="19" width="1034" height="848" key="SettingsEditor" timestamp="1591480696520">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1825" y="19" width="1034" height="848" key="SettingsEditor/0.0.1366.735/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591480696520" />
     <state x="346" y="56" key="search.everywhere.popup" timestamp="1591412672263">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="346" y="56" key="search.everywhere.popup/0.0.1366.735/1366.0.1920.1080@0.0.1366.735" timestamp="1591412672263" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/makeChange$MakeChange.ic" NAME="MakeChange Coverage Results" MODIFIED="1591480334258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pw.makeChange.*</FILTER>
+    </SUITE>
   </component>
 </project>
