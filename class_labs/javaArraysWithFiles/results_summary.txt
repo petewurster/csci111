@@ -1,0 +1,3 @@
+The highest score is 100.00.
+The lowest score is 76.80.
+The average of these scores is 89.73.
